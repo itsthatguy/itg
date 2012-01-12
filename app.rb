@@ -1,10 +1,4 @@
 # app.rb
-require "bundler/setup"
-require "sinatra"
-require "sinatra/static_assets"
-require "haml"
-require "sass"
-
 set :haml, :format => :html5
 
 get '/' do

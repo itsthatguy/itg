@@ -1,5 +1,8 @@
 require "rubygems"
-require "bundler"
+require "bundler/setup"
+require "sinatra/static_assets"
+require "haml"
+require "sass"
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 

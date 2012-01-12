@@ -24,7 +24,6 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 3.1)
   haml
-  rack
   rake
   sass
   sinatra
