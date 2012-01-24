@@ -1,13 +1,79 @@
 /* DO NOT EDIT THE screen.css FILE.
 /* SASS WILL MAKE THAT FOR YOU
+@import "grid"
+@import "text"
+
+// Specify the number of columns and set column and gutter widths
+$columns: 12
+$column-width: 60
+$gutter-width: 10
+
+// Remove the definition below for a pixel-based layout
+$total-width: 100%
 
 body
   background-color: #222
-  
-.home
+  background-image: url(../images/background-fabric.jpg)
+  margin: 0
+  padding: 0
+
+section#main
+  height: 120px
   margin: 0 auto
-  max-width: 960px
-  width: 100%
-  span,
-  h1
-    color: #f5f5ff
+  width: $width
+  .home
+    +col(12)
+    padding-top: 20px
+    margin-left: -10px
+  header
+    background-image: url(../images/background-page-top.png)
+    background-repeat: no-repeat
+    height: 80px
+    padding-left: 40px
+    padding-right: 40px
+    padding-top: 20px
+    width: $width
+    nav
+      float: right
+      padding-right: 40px
+      ul,
+      li
+        display: inline
+    .itg
+      display: inline-block
+    .itg a
+      background-image: url(../images/itg-bookmark.png)
+      background-repeat: no-repeat
+      display: block
+      line-height: 900
+      margin-left: -4px
+      margin-top: -28px
+      overflow: hidden
+      width: 92px
+      height: 102px
+        
+  section
+    background-image: url(../images/background-page-center.png)
+    background-repeat: repeat-y
+    clear: both
+    padding-left: 40px
+    padding-right: 40px
+    width: $width - 40
+    article
+      border-bottom: 1px solid #d9d9e3
+      padding: 20px 0
+      p.six
+        +span(6)
+        display: inline-block
+    
+    h1 + article
+      background-image: url(../images/hr1.png)
+      background-position: left top
+      background-repeat: repeat-x
+    &.bottom
+      +col(12)
+      background-image: url(../images/background-page-bottom.png)
+      background-repeat: no-repeat
+      height: 145px
+    article:after
+      +selfclear
