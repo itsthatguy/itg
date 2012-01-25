@@ -5,3 +5,4 @@ gem "sass"
 gem "activesupport", "~> 3.1", :require => nil
 gem "rake"
 gem "sinatra-static-assets"
+gem "heroku"
