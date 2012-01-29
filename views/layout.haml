@@ -8,13 +8,27 @@
     :javascript
       try{Typekit.load();}catch(e){}
   %body
-    %header
-      %nav
-        %ul
-          %li.dribble
-            %a(href="http://www.dribbble.com/itsthatguy") dribbble
-          %li.twitter
-            %a(href="http://www.twitter.com/itg") twitter
-      %a(href="/")
-        %div.itg
-    =yield
+    .pages
+      .t1
+      .t2
+    #main
+      %header
+        %nav
+          %ul
+            %li.dribble
+              %a(href="http://www.dribbble.com/itsthatguy") dribbble
+            %li.twitter
+              %a(href="http://www.twitter.com/itg") twitter
+        %a(href="/")
+          %div.itg
+      =yield
+    .pages
+      .b1
+      .b2
+    %footer
+      %p
+        %a{:href => @shot.url, :target => '_blank'}
+          = image_tag @player.shots[0].image_url
+          = image_tag @player.shots[1].image_url
+          = image_tag @player.shots[2].image_url
+          = image_tag @player.shots[3].image_url

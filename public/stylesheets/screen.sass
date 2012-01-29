@@ -11,6 +11,13 @@ $gutter-width: 10
 // Remove the definition below for a pixel-based layout
 $total-width: 100%
 
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"")
+  @if $inset != ""
+    -webkit-box-shadow:$top $left $blur $color $inset
+    -moz-box-shadow:$top $left $blur $color $inset
+    box-shadow:$top $left $blur $color $inset
+
 html, body
   overflow-x: hidden
 
@@ -19,17 +26,50 @@ body
   background-image: url(../images/background-fabric.png)
   margin: 0
   padding: 20px 0 0 0
+#main
+  background-image: url(../images/background-page.png)
+  margin: 0 auto
+  width: 1040px
+  box-shadow: 0 2px 3px RGBA(0,0,0,0.2)
+.pages
+  margin: 0 auto
+  width: 1044px
+.t1
+  background-color: #68676c
+  box-shadow: 0 -2px 1px #313133 inset
+  margin: 0 auto
+  width: 98%
+  height: 3px
+  z-index: 1000
+.t2
+  background-color: #828286
+  box-shadow: 0 -2px 1px #3c3c3e inset
+  margin: 0 auto
+  width: 99%
+  height: 3px
+  z-index: 999
+.b1
+  background-color: #828286
+  box-shadow: 0 0 1px RGBA(255,255,255,0.2) inset, 0 2px 3px RGBA(0,0,0,0.2), 0 3px 2px #3c3c3e inset
+  margin: 0 auto
+  width: 99%
+  height: 4px
+  z-index: 1000
+.b2
+  background-color: #68676c
+  box-shadow: 0 0 1px RGBA(255,255,255,0.2) inset, 0 2px 3px RGBA(0,0,0,0.2), 0 3px 2px #313133 inset
+  margin: 0 auto
+  width: 98%
+  height: 4px
+  z-index: 999
 header
-  background-image: url(../images/background-page-top.png)
-  background-position: center top
-  background-repeat: no-repeat
   height: 80px
   margin: 0 auto
   padding-top: 20px
-  width: 1000px
+  width: 100%
   nav
     float: right
-    padding-right: 40px
+    padding-right: 40px 
     ul,
     li
       display: inline-block
@@ -53,41 +93,34 @@ header
           background-position: -30px -30px
   .itg
     display: inline-block
-  a
-    text-decoration: none
   a .itg
     background-image: url(../images/itg-bookmark.png)
     background-repeat: no-repeat
     border: none
     display: block
-    margin-left: 24px
-    margin-top: -28px
+    margin-left: 34px
+    margin-top: -35px
     overflow: hidden
     width: 92px
     height: 102px
 
+.bottom:after
+  content: " "
+
 section
-  background-image: url(../images/background-page-center.png)
-  background-position: center top
-  background-repeat: repeat-y
   clear: both
   margin: 0 auto
-  width: 1000px
-  &.bottom
-    background-image: url(../images/background-page-bottom.png)
-    background-repeat: no-repeat
-    height: 145px
-    p
-      padding: 0 30px
+  width: 100%
   div.content
     +row
     display: block
-    padding: 0 30px
+    padding: 0 40px
+    width: 960px
     article
       +col(12)
-      display: block
       border-bottom: 1px solid #d9d9e3
       padding: 20px 0
+      width: 100%
     article:after
       +selfclear
     h1 + article
@@ -100,7 +133,7 @@ section:after, section.bottom:after
 footer
   clear: both
   margin: 0 auto
-  width: 1000px
+  width: 960px
   p
     padding: 0 30px
 
