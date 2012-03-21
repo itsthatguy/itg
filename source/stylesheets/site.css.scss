@@ -44,27 +44,29 @@ a {
 
 .sidebar {
   @include column(3);
-  @include background(#ddd);
-  @include box-shadow(0 1px 4px #ccc, inset 0 0 0 1px #ccc, inset 0 0 0px 2px #eee);
-  position: fixed;
   margin-top: 12px;
-  .logo {
-    @include text-shadow(0 2px #fff);
-    color: #111;
-    font-size: 84px;
-    font-family: "WisdomScriptAIRegular";
-    padding-top: 24px;
-    text-align: center;
-  }
-  ul {
-    padding: 20px;
-    li {
-      border-top: 1px solid #ccc;
-      padding: 10px;
+  .sidebar-fixed {
+    @include background(#ddd);
+    @include box-shadow(0 1px 4px #ccc, inset 0 0 0 1px #ccc, inset 0 0 0px 2px #eee);
+    position: fixed;
+    .logo {
+      @include text-shadow(0 2px #fff);
+      color: #111;
+      font-size: 84px;
+      font-family: "WisdomScriptAIRegular";
+      padding-top: 24px;
+      text-align: center;
+    }
+    ul {
+      padding: 20px;
+      li {
+        border-top: 1px solid #ccc;
+        padding: 10px;
+      }
     }
   }
 }
-  
+
 .main {
   @include push(5);
   @include column(9);
