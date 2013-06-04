@@ -2,6 +2,7 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "blueprint/grid";
+@import "font-awesome";
 
 $blueprint-grid-columns: 12;
 $blueprint-grid-width: 60px;
@@ -111,6 +112,7 @@ a {
       border: 1px solid #ddd;
       margin: 6px 0;
       padding: 10px;
+      text-decoration: none;
     }
   }
 }
