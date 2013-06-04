@@ -52,15 +52,18 @@ a {
     width: 200px;
 
     .logo {
-      @include text-shadow(0 2px #fff);
-      color: #111;
-      font-size: 84px;
-      font-family: "WisdomScriptAIRegular";
-      -moz-font-feature-settings: "liga=0, dlig=0";
-      -ms-font-feature-settings: "liga", "dlig" 0;
-      -webkit-font-feature-settings: "liga", "dlig" 0;
-      -o-font-feature-settings: "liga", "dlig" 0;
-      font-feature-settings: "liga", "dlig" 0;
+      a {
+        @include text-shadow(0 2px #fff);
+        color: #111;
+        text-decoration: none;
+        font-size: 84px;
+        font-family: "WisdomScriptAIRegular";
+        -moz-font-feature-settings: "liga=0, dlig=0";
+        -ms-font-feature-settings: "liga", "dlig" 0;
+        -webkit-font-feature-settings: "liga", "dlig" 0;
+        -o-font-feature-settings: "liga", "dlig" 0;
+        font-feature-settings: "liga", "dlig" 0;
+      }
       padding-top: 24px;
       text-align: center;
     }
