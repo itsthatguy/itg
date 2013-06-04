@@ -30,6 +30,10 @@ $side-gutter-width: $gutter-width;
 .sidebar [class^="icon-"],
 .sidebar [class*=" icon-"] {
   color: #bbb;
+  &:before {
+    @include inline-block;
+    width: 16px;
+  }
 }
 
 body {
