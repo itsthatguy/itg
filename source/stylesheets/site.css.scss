@@ -3,13 +3,14 @@
 @import "compass/css3";
 @import "blueprint/grid";
 @import "font-awesome";
+@import "icofont";
 
 $blueprint-grid-columns: 12;
 $blueprint-grid-width: 60px;
 $blueprint-grid-margin: 10px;
 
-$link-color:         #0388a6;
-$link-hover-color:   #009ce0;
+$link-color:         #f16448;
+$link-hover-color:   #ba4532;
 $link-focus-color:   false;
 $link-active-color:  false;
 $link-visited-color: false;
@@ -26,6 +27,11 @@ $side-gutter-width: $gutter-width;
 
 @include global-reset;
 
+.sidebar [class^="icon-"],
+.sidebar [class*=" icon-"] {
+  color: #bbb;
+}
+
 body {
   @include background(#eee);
   font-family: $font-family;
@@ -35,6 +41,7 @@ body {
 
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+  text-decoration: none;
 }
 
 .wrap {
@@ -46,26 +53,36 @@ a {
   @include column(3);
   margin-top: 12px;
   .sidebar-fixed {
-    @include background(#ddd);
-    @include box-shadow(0 1px 4px #ccc, inset 0 0 0 1px #ccc, inset 0 0 0px 2px #eee);
     position: fixed;
-    width: 200px;
-
-    .logo {
-      a {
-        @include text-shadow(0 2px #fff);
-        color: #111;
-        text-decoration: none;
-        font-size: 84px;
-        font-family: "WisdomScriptAIRegular";
-        -moz-font-feature-settings: "liga=0, dlig=0";
-        -ms-font-feature-settings: "liga", "dlig" 0;
-        -webkit-font-feature-settings: "liga", "dlig" 0;
-        -o-font-feature-settings: "liga", "dlig" 0;
-        font-feature-settings: "liga", "dlig" 0;
+    .info {
+      .title {
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
       }
-      padding-top: 24px;
-      text-align: center;
+      font-size: 13px;
+    }
+    .the-box {
+      @include background(#ddd);
+      @include box-shadow(0 1px 4px #ccc, inset 0 0 0 1px #ccc, inset 0 0 0px 2px #eee);
+      width: 200px;
+
+      .logo {
+        a {
+          @include text-shadow(0 2px #fff);
+          color: #111;
+          text-decoration: none;
+          font-size: 84px;
+          font-family: "WisdomScriptAIRegular";
+          -moz-font-feature-settings: "liga=0, dlig=0";
+          -ms-font-feature-settings: "liga", "dlig" 0;
+          -webkit-font-feature-settings: "liga", "dlig" 0;
+          -o-font-feature-settings: "liga", "dlig" 0;
+          font-feature-settings: "liga", "dlig" 0;
+        }
+        padding-top: 24px;
+        text-align: center;
+      }
     }
     ul {
       padding: 20px;
