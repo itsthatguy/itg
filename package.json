@@ -1,0 +1,36 @@
+{
+  "name": "base-react-app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "itg-react-scripts start",
+    "test": "itg-react-scripts test"
+  },
+  "devDependencies": {
+    "enzyme": "^2.9.1",
+    "file-loader": "^0.11.2",
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1",
+    "url-loader": "^0.5.9"
+  },
+  "dependencies": {
+    "eslint-config-adorable": "^0.0.5",
+    "itg-react-scripts": "^0.0.18",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "adorable"
+    ],
+    "rules": {
+      "no-console": "warn"
+    }
+  }
+}
