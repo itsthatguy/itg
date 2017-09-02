@@ -6,7 +6,7 @@
   "scripts": {
     "start": "itg-react-scripts start",
     "test": "itg-react-scripts test",
-    "heroku-postbuild": "$(npm bin)/group-dependencies install build && $(npm bin)/itg-react-scripts build"
+    "heroku-postbuild": "$(npm bin)/deps install build && $(npm bin)/itg-react-scripts build"
   },
   "devDependencies": {
     "enzyme": "^2.9.1",
