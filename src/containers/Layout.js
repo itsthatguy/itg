@@ -15,7 +15,7 @@ const styles = {
   },
 
   background: {
-    backgroundPosition: 'center',
+    backgroundPosition: 'top center',
     backgroundSize: 'cover',
     filter: 'grayscale(100%)',
     zIndex: -1,
